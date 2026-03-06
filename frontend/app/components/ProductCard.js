@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { useCart } from "../context/CartContext";
 
 export default function ProductCard({ product }) {
-    const { addToCart } = useCart();
-
-    const handleAdd = () => {
-        addToCart(product);
+    const handleBuyNow = () => {
+        // If the product has a specific SwipeSimple link, open it.
+        // Otherwise, open a default/placeholder SwipeSimple checkout page.
+        const checkoutUrl = product.swipeSimpleLink || "https://swipesimple.com/";
+        window.open(checkoutUrl, "_blank");
     };
 
     return (
@@ -24,8 +24,8 @@ export default function ProductCard({ product }) {
                 <h3>{product.name}</h3>
                 <p className="product-desc">{product.description.substring(0, 80)}...</p>
                 <span className="product-price">{product.price}</span>
-                <button className="btn btn-primary btn-block" onClick={handleAdd}>
-                    Add to Cart
+                <button className="btn btn-primary btn-block" onClick={handleBuyNow}>
+                    Buy Now
                 </button>
             </div>
         </div>
