@@ -90,6 +90,26 @@ export default function Login() {
                         </>
                     )}
                 </div>
+
+                <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--color-border)', paddingTop: '1.5rem' }}>
+                    <p style={{ textAlign: 'center', fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>Or continue with</p>
+                    <div style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
+                        <button
+                            className="btn btn-secondary btn-block"
+                            style={{ borderColor: '#4285F4', color: '#4285F4' }}
+                            onClick={() => signIn("google")}
+                        >
+                            Sign in with Google
+                        </button>
+                        <button
+                            className="btn btn-secondary btn-block"
+                            style={{ borderColor: '#1877F2', color: '#1877F2' }}
+                            onClick={() => signIn("facebook")}
+                        >
+                            Sign in with Facebook
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );
