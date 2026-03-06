@@ -215,6 +215,7 @@ img {
   z-index: 1000;
   transition: all var(--transition-medium);
   padding: var(--spacing-sm) 0;
+  background: linear-gradient(to bottom, rgba(10, 14, 11, 0.9) 0%, rgba(10, 14, 11, 0.5) 50%, rgba(10, 14, 11, 0) 100%);
 }
 
 #main-header.scrolled {
@@ -251,6 +252,7 @@ img {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .main-nav ul {
@@ -260,13 +262,14 @@ img {
 }
 
 .main-nav a {
-  color: var(--color-text-main);
-  font-weight: 500;
+  color: #ffffff;
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 1px;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
   position: relative;
   padding-bottom: 4px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .main-nav a::after {
@@ -282,7 +285,7 @@ img {
 }
 
 .main-nav a:hover {
-  color: #ffffff;
+  color: var(--color-accent);
 }
 
 .main-nav a:hover::after,
@@ -313,14 +316,15 @@ img {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-text-main);
+  color: #ffffff;
   transition: color var(--transition-fast);
   display: flex;
   align-items: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
 }
 
 .cart-icon-btn:hover {
-  color: #ffffff;
+  color: var(--color-accent);
 }
 
 .cart-badge {
