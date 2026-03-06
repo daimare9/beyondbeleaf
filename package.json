@@ -1,0 +1,10 @@
+{
+    "name": "beyondbeleaf-wrapper",
+    "version": "1.0.0",
+    "description": "Proxy for running frontend commands from the root directory",
+    "scripts": {
+        "dev": "cd frontend && npm run dev",
+        "build": "cd frontend && npm run build",
+        "start": "cd frontend && npm run start"
+    }
+}
